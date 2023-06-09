@@ -26,7 +26,9 @@ export default async function handler(req, res) {
     price,
   } = req.body
 
-  const customJSON = getCustomJSON(name, image, description, price)
+  const customJSON = getCustomJSON({
+    name, image, description, price,
+  })
   try {
     const videoRequest = await videomatikAPI.createVideoRequest({
       templateId,
