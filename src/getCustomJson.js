@@ -1,6 +1,8 @@
 // CustomJSON do template: https://app.videomatik.com.br/docs/#get-/v1/templates/-templateId-/custom-json
 // videomatikApi.getTemplateCustomJSON(oferta-varejo-nujyuua)
-const getCustomJSON = (name, image, description, price) => ({
+const getCustomJSON = ({
+  name, image, description, price,
+}) => ({
   soundtrack: {
     startTime: 0,
     source: '',
