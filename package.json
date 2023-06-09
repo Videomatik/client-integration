@@ -9,12 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/server": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/lab": "^5.0.0-alpha.133",
+    "@mui/material": "^5.13.4",
     "@videomatik/api": "^2.2.0",
+    "@videomatik/player": "^0.1.0",
+    "axios": "^1.4.0",
     "eslint-config-next": "13.4.4",
+    "lodash": "^4.17.21",
     "next": "13.4.4",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.9.0",
+    "react-use-dimensions": "^1.2.1"
   },
   "devDependencies": {
     "eslint": "^8.42.0",
