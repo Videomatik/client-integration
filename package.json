@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@videomatik/api": "^2.2.0",
     "eslint-config-next": "13.4.4",
     "next": "13.4.4",
     "prop-types": "^15.8.1",
