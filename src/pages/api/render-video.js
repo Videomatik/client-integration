@@ -1,11 +1,11 @@
-// Exemplo de Body da request
+// Request body Example
 //
 // {
-// 	"name": "produto",
-// 	"image": "https://storage.videomatik.com.br/videomatik/templates/oferta-varejo-nujyuua/assets/espykfb8--compressed-png.png",
-// 	"price": "1000",
-// 	"description": "description wfwg.rewn whfwheoiw",
-// 	"templateId": "oferta-varejo-nujyuua"
+// "name": "produto",
+// "image": "https://storage.videomatik.com.br/videomatik/templates/oferta-varejo-nujyuua/assets/espykfb8.png",
+// "price": "1000",
+// "description": "description wfwg.rewn whfwheoiw",
+// "templateId": "oferta-varejo-nujyuua"
 // }
 
 import getCustomJSON from '../../getCustomJson'

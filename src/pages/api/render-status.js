@@ -1,6 +1,7 @@
-// Exemplo de URL da request
+// Request querystring example on the url
 //
-// http://localhost:3000/api/render-status?videoRequestId=342432532532
+// videoRequestId=<video request id>
+// http://localhost:3000/api/render-status?videoRequestId=<video request id>
 
 import videomatikAPI from '../../videomatikAPI'
 
@@ -13,6 +14,16 @@ export default async function handler(req, res) {
   const { videoRequestId } = req.query
   try {
     const videoRequest = await videomatikAPI.getOneVideoRequest(videoRequestId)
+    // Response example:
+    //
+    // {
+    //   "state": "waiting || "rendering" || "finished" || "error",
+    //   "downloadURL": null  || "<url to download the video>"
+    //   "error": {
+    //     "code": null,
+    //     "message": "Your CustomJSON is invalid"
+    //   }
+    // }
     res.status(200).json(videoRequest.renderJob)
   } catch (error) {
     res.status(error.response.status).json(error.response.data)
