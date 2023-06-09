@@ -9,7 +9,7 @@
 // }
 
 import getCustomJSON from '../../getCustomJson'
-import postVideoRequest from '../../videomatik-api/postVideoRequest'
+import videomatikAPI from '../../videomatikAPI'
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -18,13 +18,20 @@ export default async function handler(req, res) {
   }
 
   const {
-    templateId, name, image, description, price,
+    templateId,
+    compositionId = 'default',
+    name,
+    image,
+    description,
+    price,
   } = req.body
+
   const customJSON = getCustomJSON(name, image, description, price)
   try {
-    const videoRequest = await postVideoRequest({
+    const videoRequest = await videomatikAPI.createVideoRequest({
       templateId,
       customJSON,
+      compositionId,
     })
     res.status(200).json(videoRequest)
   } catch (error) {
@@ -33,6 +40,5 @@ export default async function handler(req, res) {
       return
     }
     res.status(400).json({ error: error.message })
-    console.log('err', error)
   }
 }
