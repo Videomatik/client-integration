@@ -20,7 +20,7 @@ export default function Home() {
       />
       <style jsx>
         {`
-        :global(html), :global(body), :global(#__next), .index-page {
+        .index-page {
           height: 100%;
         }
         `}

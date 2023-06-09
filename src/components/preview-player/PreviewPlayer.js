@@ -141,6 +141,7 @@ export default function PreviewPlayer({ templateId, data }) {
       width="100%"
       height="100%"
       position="relative"
+      alignItems="center"
     >
       <VideomatikPreview
         ref={playerRef}

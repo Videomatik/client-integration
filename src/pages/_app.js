@@ -22,6 +22,13 @@ export default function Application(props) {
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <Component {...pageProps} />
+        <style jsx>
+          {`
+        :global(html), :global(body), :global(#__next) {
+          height: 100%;
+        }
+        `}
+        </style>
       </ThemeProvider>
     </CacheProvider>
   )
