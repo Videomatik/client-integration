@@ -176,7 +176,7 @@ export default function PreviewPlayer({ templateId, data }) {
           }
         }}
       />
-      <Box display="flex" gap={2} width={controlsWidth}>
+      <Box display="flex" gap={2} width={controlsWidth} backgroundColor="gray">
         <IconButton
           onClick={() => setIsPlaying((currentIsPlaying) => !currentIsPlaying)}
         >
@@ -192,7 +192,7 @@ export default function PreviewPlayer({ templateId, data }) {
           />
         </Box>
       </Box>
-      <Box display="flex" justifyContent="center" width={controlsWidth}>
+      <Box display="flex" justifyContent="center" width={controlsWidth} padding="0.5em">
         <RenderVideoButton
           productData={data}
         />
