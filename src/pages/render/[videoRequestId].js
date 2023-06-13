@@ -53,7 +53,7 @@ const useVideoRequest = (videoRequestId) => {
 
 function CenterBox({ children }) {
   return (
-    <Box display="flex" alignItems="center" justifyContent="center" height="100%">
+    <Box display="flex" alignItems="center" justifyContent="center" height="100%" flexDirection="column">
       {children}
     </Box>
   )
@@ -74,6 +74,8 @@ export default function RenderPage() {
     return (
       <CenterBox>
         <CircularProgress />
+        <br />
+        Vídeo está renderizando...
       </CenterBox>
     )
   }
