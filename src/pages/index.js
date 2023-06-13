@@ -10,7 +10,11 @@ export default function Home() {
   const { data } = router.query
 
   if (!data) {
-    return 'URL Parameter (Data) is missing'
+    return (
+      <p style={{ color: 'black' }}>
+        URL Parameter (Data) is missing
+      </p>
+    )
   }
 
   const dataJSON = useMemo(() => JSON.parse(data), [data])
