@@ -7,7 +7,7 @@ import useDimensions from 'react-use-dimensions'
 import VideomatikPlayer from '@videomatik/player'
 
 import useDebounce from './useDebounce'
-import getCustomJSON from '../../getCustomJson'
+import { getCustomJSON } from '../../template'
 
 const CUSTOM_JSON_DEBOUNCE_TIME = 0
 const RESIZE_DEBOUNCE_TIME = 300

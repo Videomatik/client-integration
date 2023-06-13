@@ -1,5 +1,8 @@
 // CustomJSON do template: https://app.videomatik.com.br/docs/#get-/v1/templates/-templateId-/custom-json
 // videomatikApi.getTemplateCustomJSON(oferta-varejo-nujyuua)
+
+const templateId = 'oferta-varejo-nujyuua'
+
 const formatCurrency = (value) => value.toLocaleString('pt-BR', {
   minimumFractionDigits: 2,
   maximumFractionDigits: 2,
@@ -120,14 +123,15 @@ const getCustomJSON = ({
       {
         path: 'assets[3].layers[9].shapes[0].it[2]',
         color: '#aa1e0d',
-      },
-      {
-        path: 'assets[3].layers[10].shapes[0].it[1]',
-        color: '#ffffff',
-      },
-      {
-        path: 'assets[3].layers[10].shapes[0].it[2]',
-        color: '#ffffff',
+        // shapes: [
+        //   {
+        //     path: 'layers[2].shapes[0].it[1]',
+        //     color: '#db9300',
+        //   },
+        //   {
+        //     path: 'layers[3].shapes[0].it[1]',
+        //     color: '#ffffff',.it[2]',
+        // color: '#ffffff',
       },
       {
         path: 'assets[4].layers[3].shapes[0].it[2]',
@@ -137,4 +141,4 @@ const getCustomJSON = ({
   }
 }
 
-module.exports = getCustomJSON
+module.exports = { templateId, getCustomJSON }

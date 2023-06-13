@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
 import LoadingButton from '@mui/lab/LoadingButton'
+import { templateId } from '../template'
 
 export default function RenderVideoButton({ productData }) {
   const [isLoading, setIsLoading] = useState(false)
@@ -10,7 +11,7 @@ export default function RenderVideoButton({ productData }) {
   const renderVideo = async () => {
     setIsLoading(true)
     try {
-      const response = await axios.post('/api/render-video', { ...productData })
+      const response = await axios.post('/api/render-video', { ...productData, templateId })
       const videoRequest = response.data
       router.push(`/render/${videoRequest.id}`)
     } finally {

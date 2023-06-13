@@ -8,7 +8,7 @@
 // "templateId": "oferta-varejo-nujyuua"
 // }
 
-import getCustomJSON from '../../getCustomJson'
+import { getCustomJSON } from '../../template'
 import videomatikAPI from '../../videomatikAPI'
 
 export default async function handler(req, res) {
