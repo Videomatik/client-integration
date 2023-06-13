@@ -22,6 +22,7 @@ export default function RenderVideoButton({ productData }) {
       loading={isLoading}
       onClick={() => renderVideo()}
       variant="contained"
+      color="secondary"
     >
       Render Video
     </LoadingButton>
