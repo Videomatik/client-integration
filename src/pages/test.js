@@ -1,12 +1,51 @@
-export default function TestPage() {
-  return (
-    <div style={{ backgroundColor: '#D3D3D3' }}>
-      <iframe
-        title="test-page"
-        style={{ height: '800px', width: '800px' }}
-        src="http://localhost:3000/?data={%22name%22:%22produto%22,%22templateId%22:%22oferta-varejo-nujyuua%22,%22price%22:%221000%22,%20%22description%22:%22description%20fhergmeru%20rufghnerhg%22,%20%22image%22:%22https://storage.videomatik.com.br/videomatik/templates/oferta-varejo-nujyuua/assets/espykfb8--compressed-png.png%22}"
-      />
+import { useState } from 'react'
+import Box from '@mui/material/Box'
+import TextField from '@mui/material/TextField'
 
-    </div>
+export default function TestPage() {
+  const [productName, setProductName] = useState('')
+  const [productPrice, setProductPrice] = useState('')
+  const [productDescription, setProductDescription] = useState('')
+  const productJson = JSON.stringify({
+    name: productName,
+    price: productPrice,
+    description: productDescription,
+    image: 'https://storage.videomatik.com.br/videomatik/templates/oferta-varejo-nujyuua/assets/espykfb8--compressed-png.png',
+  })
+  return (
+    <Box padding={2}>
+      <Box display="flex" gap={1} padding={2}>
+        <TextField
+          id="outlined-basic"
+          label="Produto"
+          variant="outlined"
+          value={productName}
+          onChange={(event) => setProductName(event.target.value)}
+        />
+
+        <TextField
+          id="outlined-basic"
+          label="Preço"
+          variant="outlined"
+          value={productPrice}
+          onChange={(event) => setProductPrice(event.target.value)}
+        />
+        <TextField
+          id="outlined-basic"
+          label="Descrição"
+          variant="outlined"
+          value={productDescription}
+          onChange={(event) => setProductDescription(event.target.value)}
+        />
+      </Box>
+      <div>
+        <iframe
+          title="test-page"
+          style={{ height: '800px', width: '800px' }}
+          src={`http://localhost:3000/?data=${productJson}`}
+        />
+
+      </div>
+    </Box>
   )
 }

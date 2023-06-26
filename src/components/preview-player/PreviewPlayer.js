@@ -176,8 +176,9 @@ export default function PreviewPlayer({ templateId, data }) {
           }
         }}
       />
-      <Box display="flex" gap={2} width={controlsWidth} backgroundColor="gray">
+      <Box display="flex" gap={2} width={controlsWidth}>
         <IconButton
+          color="primary"
           onClick={() => setIsPlaying((currentIsPlaying) => !currentIsPlaying)}
         >
           {iconButtonComponent}

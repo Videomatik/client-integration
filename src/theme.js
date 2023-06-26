@@ -2,13 +2,13 @@ import { createTheme } from '@mui/material/styles'
 
 const theme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
     background: {
       default: 'transparent',
     },
 
     primary: {
-      main: '#eeeeee',
+      main: '#333',
     },
 
     secondary: {
@@ -24,6 +24,9 @@ const theme = createTheme({
     },
   },
   components: {
+    LoadingButton: {
+      background: '#000',
+    },
     MuiTextField: {
 
     },
